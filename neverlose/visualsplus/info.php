@@ -5,6 +5,6 @@ $jsonObject = array(
 
 $jsonString = json_encode($jsonObject);
 
-header('Content-Type: application/json');
-echo $jsonString;
+header('Content-Type: text/plain');
+echo "<pre>{$jsonString}</pre>";
 ?>
