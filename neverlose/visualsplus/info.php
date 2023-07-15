@@ -1,10 +1,24 @@
-<?php
-$jsonObject = array(
-    "version" => "1.2.0"
-);
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Display</title>
+  <style>
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <pre id="json-data"></pre>
 
-$jsonString = json_encode($jsonObject);
+  <script>
+    var jsonData = {
+      "version": "1.2.0"
+    };
 
-header('Content-Type: text/plain');
-echo "<pre>{$jsonString}</pre>";
-?>
+    var jsonFormatted = JSON.stringify(jsonData, null, 2);
+    document.getElementById("json-data").textContent = jsonFormatted;
+  </script>
+</body>
+</html>
