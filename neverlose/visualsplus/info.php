@@ -4,5 +4,7 @@ $jsonObject = array(
 );
 
 $jsonString = json_encode($jsonObject);
+
+header('Content-Type: application/json');
 echo $jsonString;
 ?>
